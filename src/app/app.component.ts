@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  servers =[];
+  servers;
   constructor() {
   }
   addServer(){
     this.servers.push('Add Another Server');
   }
   removeServer( i: number ) {
-    let position = i;
+    let position = i + 2;
     this.servers.splice( position, 1 );
   }
 }
