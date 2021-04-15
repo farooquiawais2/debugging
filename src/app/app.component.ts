@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'debugging';
+  servers =[];
+  constructor() {
+  }
+  addServer(){
+    this.servers.push('Add Another Server');
+  }
+  removeServer( i: number ) {
+    let position = i;
+    this.servers.splice( position, 1 );
+  }
 }
